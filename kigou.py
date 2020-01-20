@@ -149,6 +149,7 @@ def game_main():
         index= 1
         mouse_c=0
 
+
     elif index ==1:
         difficulty=0
         if mouse_c==1:
@@ -180,16 +181,19 @@ def game_main():
             if difficulty == 8:
                 index=7
             index=2
-        
+
+
     elif index==2:
         if drop_kigo() ==False:
             index=3
         draw_kigo()
 
+
     elif index==3:
         check_kigo()
         draw_kigo()
         index=4
+
 
     elif index==4:
         sc= sweep_kigo()
@@ -207,6 +211,7 @@ def game_main():
                 timer=0
         draw_kigo()
     
+
     elif index == 5:
         if 24 <= mouse_x and mouse_x <24+72*8 and 24<=mouse_y and mouse_y<24+72*10:
             cursor_x = int((mouse_x-24)/72)
@@ -220,6 +225,7 @@ def game_main():
         cvs.delete("CURSOR")
         cvs.create_image(cursor_x*72+60,cursor_y*72+60,image=cursor,tag="CURSOR")
         draw_kigo()
+
 
     elif index == 6:
         timer= timer+1
@@ -240,10 +246,6 @@ def game_main():
         pwb = tkinter.Button(text="check",font=("Times Nes Roman",32),command=click_btn)
         pwb.place(x=220,y=450)
         pwb.pack()
-
-            
-
-
 
     
     cvs.delete("INFO")
